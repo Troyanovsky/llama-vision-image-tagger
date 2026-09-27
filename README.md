@@ -18,7 +18,7 @@ This project has an accompanying blog post [here](https://medium.com/design-boot
 
 ## Prerequisites
 
--   **Python 3.7+**: Ensure Python is installed on your system.
+-   **Python 3.10+**: Ensure Python is installed on your system.
 -   **Ollama**: Install Ollama to run the Llama model. Follow the instructions on the [Ollama website](https://ollama.com/).
 -   **ChromaDB**: ChromaDB will be installed as a Python package via pip.
 
