@@ -11,6 +11,15 @@ import logging
 from image_processor import ImageProcessor, update_image_metadata
 from vector_store import VectorStore
 
+from pydantic_settings import BaseSettings
+
+
+class Settings(BaseSettings):
+    model_name: str = "llama3.2-vision"
+
+
+settings = Settings()
+
 app = FastAPI()
 
 # Mount static files (your frontend)
@@ -274,7 +283,7 @@ async def process_image(request: ProcessImageRequest):
             raise HTTPException(status_code=404, detail="Image not found")
 
         # Process the image
-        processor = ImageProcessor()
+        processor = ImageProcessor(settings.model_name)
         metadata = await processor.process_image(full_image_path)
 
         # Update metadata file

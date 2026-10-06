@@ -2,3 +2,4 @@ fastapi==0.115.6
 uvicorn==0.32.1
 ollama==0.4.4
 chromadb
+pydantic-settings==2.15.0
